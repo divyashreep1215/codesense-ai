@@ -13,6 +13,8 @@ def analyze_code_with_ai(code: str) -> str:
         response = client.chat.completions.create(
             messages=[{"role": "user", "content": prompt}],
             model="openai/gpt-oss-20b"
+            temperature=0.2,
+            max_tokens=600 
         )
         return response.choices[0].message.content
     except Exception as e:
@@ -32,7 +34,10 @@ def chat_with_ai(user_input: str, code_context: str = None) -> str:
         response = client.chat.completions.create(
             messages=[{"role": "user", "content": prompt}],
             model="openai/gpt-oss-20b"
+             temperature=0.3,
+             max_tokens=500 
         )
         return response.choices[0].message.content
     except Exception as e:
+
         return f"AI chat error: {e}"
