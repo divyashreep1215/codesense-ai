@@ -9,7 +9,7 @@ from utils.pdf_generator import generate_pdf
 import pandas as pd
 
 st.set_page_config(page_title="CodeSense AI (Groq)", layout="wide")
-st.title("💡 CodeSense AI – Groq Powered Code Review & Chatbot")
+st.title(" CodeSense AI – Groq Powered Code Review & Chatbot")
 
 # ---------------- Session States ----------------
 if 'history' not in st.session_state:
@@ -37,7 +37,7 @@ else:
 
 # ---------------- Code Analysis ----------------
 if code:
-    st.subheader("🔍 Code Analysis Results")
+    st.subheader(" Code Analysis Results")
 
     parsed = parse_code(code)
     st.write(parsed)
@@ -68,11 +68,11 @@ if code:
     ], ignore_index=True)
 
     # Dashboard
-    st.subheader("📊 Performance Dashboard")
+    st.subheader("Performance Dashboard")
     plot_score_history(st.session_state['history'])
 
     # ---------------- PDF Download (ReportLab) ----------------
-    if st.button("📄 Download PDF Report", key="download_pdf"):
+    if st.button(" Download PDF Report", key="download_pdf"):
 
         pdf_buffer = generate_pdf(
             code,
@@ -92,7 +92,7 @@ if code:
         )
 
 # ---------------- Context-Aware Chatbot ----------------
-st.subheader("💬 AI Chatbot for Coding Help")
+st.subheader(" AI Chatbot for Coding Help")
 user_question = st.text_input("Ask a coding question or about your code:")
 
 if st.button("Send") and user_question:
@@ -107,4 +107,5 @@ for speaker, text in st.session_state['chat_history']:
     if speaker == "You":
         st.markdown(f"**You:** {text}")
     else:
+
         st.markdown(f"**AI:** {text}")
