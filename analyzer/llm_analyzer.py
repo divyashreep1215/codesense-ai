@@ -35,6 +35,4 @@ def chat_with_ai(user_input: str, code_context: str = None) -> str:
         )
         return response.choices[0].message.content
     except Exception as e:
-
         return f"AI chat error: {e}"
-
