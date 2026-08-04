@@ -2,7 +2,7 @@
 
 An AI-powered code analysis and review platform built with Streamlit and Groq LLM. CodeSense AI analyzes your code for structure, complexity, and quality — then uses AI to generate human-readable feedback, all through an interactive web interface.
 
-🔗 **Live Demo:** [Add your deployed app link here]
+🔗 **Live Demo:** https://codesense-ai-igudsesvrjumlv9phgjeck.streamlit.app/
 
 ---
 
